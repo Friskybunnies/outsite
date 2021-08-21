@@ -34,10 +34,10 @@ function LocationImageSquares(props) {
                             return (
                                 <div key={location.id}>
                                     <a href={`https://app.outsite.co/book-now/search?where=${location.id}`}>
-                                        <img src={location.wfContent.cityImage} alt="city" className="aspect-w-4 aspect-h-3 w-full h-48 rounded-md" style={{ backgroundSize: "cover" }} />
+                                        <img src={location.wfContent.cityImage} alt="city" className="aspect-w-4 aspect-h-3 w-full h-52 rounded-md" style={{ backgroundSize: "cover" }} />
                                         <div className="py-3 ">
-                                            <h4 className="text-lg font-medium text-gray-900">{location.wfContent?.name}</h4>
-                                            <p className="text-sm text-gray-600">{location.wfContent?.houseName}</p>
+                                            <h4 className="text-lg text-left font-medium text-gray-900">{location.wfContent?.name}</h4>
+                                            <p className="text-sm text-left text-gray-600">{location.wfContent?.houseName}</p>
                                         </div>
                                     </a>
                                 </div>

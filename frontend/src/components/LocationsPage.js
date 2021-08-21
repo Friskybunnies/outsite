@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import Guests from './Guests';
 import Space from './Space';
 import Covid from './Covid';
-import Hero from '../images/Hero.jpeg';
+import Hero from '../images/Hero.png';
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
 import LocationImageSquares from './LocationImageSquares';
@@ -45,7 +45,7 @@ function LocationsPage() {
     return (
         <div className="">
             <div className="px-0">
-                <div className="h-96 bg-center" style={{ backgroundImage: `url(${Hero})`, backgroundSize: 'cover' }}>
+                <div className="w-full h-96 bg-center" style={{ backgroundImage: `url(${Hero})`, backgroundSize: 'fill' }}>
                 </div>
                 <div className="container mx-auto px-8">
                     <div className="-mt-28 mb-10 ">
@@ -53,7 +53,7 @@ function LocationsPage() {
                             Work anywhere. Live differently.
                         </div>
                     </div>
-                    <div className="w-full px-3 px-8 py-3 border border-gray-300 shadow-sm bg-white filter drop-shadow-md">
+                    <div className="w-full px-3 px-8 py-3 border rounded-md border-gray-300 shadow-sm bg-white filter drop-shadow-md">
                         <div className="grid grid-cols-6 gap-2 items-end">
                             <div className="col-span-2">
                                 <div className="text-left text-sm font-medium text-gray-700">Space</div>
