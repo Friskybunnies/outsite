@@ -16,37 +16,37 @@ function Space(props) {
             <Listbox value={props.selectedPlaceId.wfContent?.name} onChange={getSelectedPlace}>
                 {({ open }) => (
                     <>
-                        <div className="mt-1 relative">
-                            <Listbox.Button className='w-full bg-white pl-3 border border-gray-300 rounded-md shadow-sm py-2 text-left cursor-pointer text-sm'>
-                                <span className="w-full inline-flex">
+                        <div className="mt-1 relative focus:outline-none">
+                            <Listbox.Button className='w-full bg-white pl-3 border border-gray-300 rounded-md shadow-sm py-2 text-left cursor-pointer text-sm focus:outline-none'>
+                                <span className="w-full inline-flex focus:outline-none">
                                     <span className="">{props.selectedPlaceName}</span>
                                 </span>
-                                <span className="absolute inset-y-0 right-0 flex items-center pr-2">
-                                    <ChevronUpIcon className={`${open ? 'transform rotate-180' : ''} transition duration-500 h-5 w-5 text-gray-400`} />
+                                <span className="absolute inset-y-0 right-0 flex items-center pr-2 focus:outline-none">
+                                    <ChevronUpIcon className={`${open ? 'transform rotate-180' : ''} transition duration-500 h-5 w-5 text-gray-400 focus:outline-none`} />
                                 </span>
                             </Listbox.Button>
-                            <Transition show={open} leave="transition-opacity ease-in duration-150" leaveFrom="opacity-90" leaveTo="opacity-0">
+                            <Transition show={open} leave="transition-opacity ease-in duration-150 focus:outline-none" leaveFrom="opacity-90 focus:outline-none" leaveTo="opacity-0 focus:outline-none">
                             </Transition>
-                            <Listbox.Options className="absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 overflow-auto text-sm">
+                            <Listbox.Options className="absolute mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 overflow-auto text-sm focus:outline-none">
                                 {Object.keys(placeGroups).map((group) => (
-                                    <Disclosure key={group} defaultOpen={false} className="">
+                                    <Disclosure key={group} defaultOpen={false} className="focus:outline-none">
                                         {({ open }) => (
                                             <div>
-                                                <Disclosure.Button className="flex text-left text-lg justify-between w-full px-4 py-2 text-gray-900">
+                                                <Disclosure.Button className="flex text-left text-lg justify-between w-full px-4 py-2 text-gray-900 focus:outline-none">
                                                     <span>{group}</span>
-                                                    <ChevronUpIcon className={`${open ? 'transform rotate-180' : ''} h-5 w-5`} />
+                                                    <ChevronUpIcon className={`${open ? 'transform rotate-180 focus:outline-none' : ''} h-5 w-5 focus:outline-none`} />
                                                 </Disclosure.Button>
-                                                <Disclosure.Panel className="px-4 pb-2 text-gray-500">
+                                                <Disclosure.Panel className="px-4 pb-2 text-gray-500 focus:outline-none">
                                                     {props.locations.filter(location => location.region === group).map(location => {
                                                         return (
-                                                            <Listbox.Option key={location.id} className={({ active, selected }) => classNames(active ? 'cursor-pointer bg-gray-100' : 'cursor-default', 'relative py-1 pl-8 pr-4')} value={location} onClick={getSelectedPlace}>
+                                                            <Listbox.Option key={location.id} className={({ active, selected }) => classNames(active ? 'cursor-pointer bg-gray-100' : 'cursor-default', 'relative py-1 pl-8 pr-4 focus:outline-none')} value={location} onClick={getSelectedPlace}>
                                                                 {({ selected }) => (
                                                                     <div>
-                                                                        <div className="flex flex-col">
-                                                                            <span className='text-base text-left text-gray-900'>
+                                                                        <div className="flex flex-col focus:outline-none">
+                                                                            <span className='text-base text-left text-gray-900 focus:outline-none'>
                                                                                 {location.wfContent?.name}
                                                                             </span>
-                                                                            <span className='text-left text-gray-600 text-xs tracking-widest uppercase truncate'>
+                                                                            <span className='text-left text-gray-600 text-xs tracking-widest uppercase truncate focus:outline-none'>
                                                                                 {location.wfContent?.houseName}
                                                                             </span>
                                                                         </div>
