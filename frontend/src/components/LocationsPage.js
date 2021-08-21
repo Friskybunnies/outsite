@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import Guests from './Guests';
 import Space from './Space';
 import Covid from './Covid';
-import Hero from './images/Hero.jpeg';
+import Hero from '../images/Hero.jpeg';
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
 import LocationImageSquares from './LocationImageSquares';
