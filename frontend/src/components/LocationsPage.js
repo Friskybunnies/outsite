@@ -45,7 +45,7 @@ function LocationsPage() {
     return (
         <div className="">
             <div className="px-0">
-                <div className="w-full h-96 bg-center" style={{ backgroundImage: `url(${Hero})`, backgroundSize: 'fill' }}>
+                <div className="max-w-full h-96 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${Hero})`, backgroundSize: 'fill' }}>
                 </div>
                 <div className="container mx-auto px-8">
                     <div className="-mt-28 mb-10 ">
