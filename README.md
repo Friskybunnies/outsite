@@ -8,4 +8,4 @@
 #### 4. ```cd``` up to root directory. ```cd``` into the ```backend``` folder and run ```npm install```.
 #### 5. While still in ```backend```, run ```node server.js```.
 #### 6. ```cd``` up to root directory. ```cd``` into ```frontend``` and run ```npm start```.
-#### 7. It works! * Angelic choir *
+#### 7. It works! * *Angelic choir* *
